@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\section{Functions in number theory}
+\subsection{Rules}
+\begin{enumerate}
+\item
+\textbf{Fermat's little theorem.} \\
+For prime $p$ and integer $a$
+$$a^p \equiv a \mod p$$
+
+\item
+\textbf{Wilson's theorem.} \\
+$$(p-1)! \equiv -1 \mod p$$
+if and only if when $p$ is prime number.
+
+\item 
+\textbf{Number of factors} \\
+The number of positive factors of $n=p_1^{\alpha_1} \dots p_k^{a_k}$
+$$d(n)= (\alpha_1+1)(\alpha_2+1)\dots (\alpha_k+1)$$	
+\item 
+\textbf{Sum of factors} \\
+The sum of positive factors of $n=p_1^{\alpha_1} \dots p_k^{a_k}$
+
+$$\sigma(n)= \frac{p_1^{\alpha_1+1}-1}{p_1-1} \dots  \frac{p_k^{\alpha_k+1}-1}{p_k-1}$$
+
+\item 
+\textbf{Euler's function} \\
+Euler’s function or totient function $\varphi(n)$ is defined for $n=p_1^{\alpha_1} \dots p_k^{a_k}$ as the number
+of positive integers less than $n$ and coprime to $n$. Then
+$$\varphi(n) = n \left(1-\frac{1}{p_1}\right) \dots  \left(1-\frac{1}{p_k}\right)$$
+
+
+\item 
+\textbf{Euler's theorem}  (Generalisation of Fermat's theorem)\\
+Let $n$ be a natural number and $a$ an integer such that $\gcd(a,n)=1$. Then
+$$a^{\varphi(n)} \equiv 1 \mod n $$
+
+\end{enumerate}
+
+\subsection{Problems}
+\begin{enumerate}
+
+\item 
+Find all primes $p$, for which the sum of all positive factors of $p^4$ is a perfect square.
+
+\item 
+Prove that for positive integer $n$ 
+$$\sum_{d|n} \varphi (d) =n $$
+
+\item 
+Prove that for positive integers $a$ and $b$ 
+$$ \varphi(ab) = \varphi (a)\varphi(b)\frac{\gcd(a,b)}{\varphi(\gcd(a,b))} $$
+
+\item % https://artofproblemsolving.com/wiki/index.php?title=Fermat%27s_Little_Theorem#Problems
+One of Euler's conjectures was disproved in the 1960s by three American mathematicians when they showed there was a positive integer such that $133^5+110^5+84^5+27^5=n^5$. Find the value of ${n}$. 
+
+\item  %p46 http://s3.amazonaws.com/aops-cdn.artofproblemsolving.com/resources/articles/olympiad-number-theory.pdf
+How many prime numbers $p$ are there, such that $29^p+1$ is a multiple of $p$?
+
+\item 
+Prove that if $\gcd(a,n)=1$, then
+$$a^b \equiv a^{b \mod \varphi(n)}  \mod n$$
+
+\item % http://s3.amazonaws.com/aops-cdn.artofproblemsolving.com/resources/articles/olympiad-number-theory.pdf
+Find the last three digits of $2008^{2007^{2006^{\dots^{^{}2^{1}}}}}$.
+
+\item 
+Prove that there exists no positive integer for which $n! + 19^{93}$ is a perfect square.
+
+\item 
+Find all pairs of positive prime numbers $(p_1,p_2)$ for which the equation $$\phi(n^2) = n + p_1p_2$$
+has a solution for $n$ in positive integers. 
+
+\item % http://www.math.olympiaadid.ut.ee/eng/archive/bw/bw05sol.pdf
+
+Let $p$ be a prime number and let $n$ be a positive integer. Let $q$ be a positive divisor of $(n+1)^p-n^p$. Show that $q-1$ is divisible by $p$.
+
+\end{enumerate}
+
+
+\end{document}

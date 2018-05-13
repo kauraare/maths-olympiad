@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\relpenalty=10000
+\binoppenalty=10000
+
+\begin{document}
+
+\section*{Jensen's inequality}
+Given positive real numbers $\lambda_1,\hdots,\lambda_n$ for which $\lambda_1+\hdots+\lambda_n=1$  and a convex function $f(x)$ the following holds:
+$$f(\lambda_1 x_1 + \hdots + \lambda_n x_n) \leq \lambda_1 f(x_1) + \hdots + \lambda_n f(x_n)$$
+Similarly, when $f(x)$ is a concave function, then 
+$$f(\lambda_1 x_1 + \hdots + \lambda_n x_n) \geq \lambda_1 f(x_1) + \hdots + \lambda_n f(x_n)$$
+
+\subsection*{Problems}
+\begin{enumerate}
+	\item
+	Prove Jensen's inequality. When does the equality hold?
+	
+	\item 
+	Prove the power mean inequality using Jensen's inequality.
+	
+	\item % Vorratused 96
+	Prove for positive real numbers $a,b,c$
+	$$\frac{9}{2(a+b+c)} \leq \frac{1}{a+b} + \frac{1}{b+c} + \frac{1}{c+a} \leq \frac{1}{2} \left( \frac{1}{a} + \frac{1}{b} + \frac{1}{c} \right) $$
+	
+	\item % vorrat 118
+	$\alpha,\beta,\gamma$ are angles of an acute triangle. Prove that
+	$$\cos \alpha + \cos \beta + \cos \gamma \leq \frac{3}{2}$$
+	
+	\item % vorrat p68
+	$a_1,\hdots,a_n$ are positive real numbers and $b_1, \hdots, b_n$ their permutation. Prove that
+	$$\left( a_1 + \frac{1}{b_1} \right) 
+	\left( a_2 + \frac{1}{b_2} \right) 
+	\hdots
+	\left( a_n + \frac{1}{b_n} \right) 
+	\geq 2^n
+	$$
+	Prove that for odd $n$, the equality holds if there exists $i$ for which $a_i=1$.
+	
+	\item % BW2002-4
+	Let $n$ be a positive  integer. Prove that
+	\[
+	\sum_{i=1}^{n}x_i(1-x_i)^2 \leq \left(1-\frac{1}{n}\right)^2
+	\]
+	for all nonnegative real numbers $x_1,x_2,\ldots,x_n$ such that $x_1+x_2+\cdots+x_n=1$.
+	
+	\item % http://www.math.olympiaadid.ut.ee/eng/archive/prob1213.pdf S-6
+	A class consists of 7 boys and 13 girls. During the first three months of the school year, each boy has communicated with each girl at least once. Prove that there exist two boys and two girls such that both boys communicated with both girls first time in the same month.
+	
+\end{enumerate}
+\end{document}

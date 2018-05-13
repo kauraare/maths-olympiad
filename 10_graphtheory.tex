@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\relpenalty=10000
+\binoppenalty=10000
+
+\begin{document}
+
+\section*{Graph theory}
+\subsection*{Theory}
+\begin{enumerate}
+	\item 
+	Graph $G(V,E)$ is set of \emph{vertices} $V$ and \emph{edges} $E$ (pairs of vertices). If there is an edge $(x,y) \in E$, then $x$ and $y$ are said to be \emph{connected}.
+	\item 
+	A \emph{proper graph} is a graph with no more than one edge between each pair of vertices and in which no vertex is connected to itself.
+	\item 
+	Proper graph in which each pair of vertices is connected is called a \emph{complete graph}.
+	\item
+	A \emph{complement} graph $\overline{G}$ has vertices equal to vertices of $G$ and its vertices $x$ and $y$ are connected if and only if $x$ and $y$ are not connected in $G$.
+	
+	\item 
+	An \emph{oriented graph} is one in which the pairs in the graph are ordered.
+	\item
+	The vertices of a \emph{k-partite graph} can be partitioned into $k$ non-empty disjoint sets in such way that there are no connections between vertices in each set.
+	\item 
+	The \emph{degree} of a vertex $x$ is the number of times $x$ is the endpoint of an edge. Then
+	$$\sum_{x \in V} d(x) = 2 \abs{E} $$
+	\item 
+	A \emph{trajectory (or path)} is a sequence of vertices for which subsequent vertices are connected.
+	\item 
+	A \emph{circuit} is a path that ends and starts in the same vertex.
+	\item 
+	A \emph{cycle} is a circuit in which no vertex appears more than once (except the initial/final vertex).
+	\item
+	In a \emph{connected graph} there exists a path between any two points of the graph.
+	\item 
+	\emph{Tree} is a connected graph with no circuits. A connected graph with $n$ vertices is a tree if and only if it has $n-1$ edges.
+	\item 
+	\emph{Euler path} is a path in which every edge of the graph appears exactly once. Likewise \emph{Euler circuit} is a circuit in which every edge appears exactly once.
+	\item 
+	If each vertex in a connected graph has even degree, then the graph contains an Euler circuit.
+	\item 
+	If a connected graph has exactly two vertices with odd degree, it contains an Euler path.
+	\item 
+	A \emph{Hamilton circuit} is a circuit in which each vertex appears exactly once.
+	\item 
+	A \emph{planar graph} can be embedded in a plane with edges corresponding to non-intersecting lines (not necessarily straight). A planar graph with $n$ vertices has at most $3n-6$ edges.
+	
+\end{enumerate}
+
+\newpage
+\subsection*{Problems}
+\begin{enumerate}
+	\item
+	Prove that at least one of $G$ and $\overline{G}$ is connected.
+	
+	\item 
+	\emph{(Dirac's theorem).} Prove that a graph with $n$ vertices contains a Hamilton cycle if the degree of each vertex is at least $n/2$. 	
+	
+	\item 
+	\emph{(Euler's formula).}  A convex polyhedron has $E$ edges, $F$ faces and $V$ vertices. Prove that $E+2=F+V$.
+
+	\item % http://www.math.olympiaadid.ut.ee/arhiiv/baltitee/bt1997/bw97est.pdf
+	In a forest each of n animals ($n \leq 3$) lives in its own cave, and there is exactly one separate path
+	between any two of these caves. Before the election for King of the Forest some of the animals
+	make an election campaign. Each campaign-making animal visits each of the other caves exactly
+	once, uses only the paths for moving from cave to cave, never turns from one path to another
+	between the caves and returns to its own cave in the end of its campaign. It is also known that
+	no path between two caves is used by more than one campaign-making animal.
+	\begin{enumerate}
+		\item
+		Prove that for any prime $n$, the maximum possible number of campaign-making animals is $\tfrac{n-1}{2}$
+		\item 
+		Find the maximum number of campaign-making animals for $n = 9$.	
+	\end{enumerate}
+	
+	\item % https://mks.mff.cuni.cz/kalva/usa/usoln/usol991.html
+	Certain squares of an $n \times n$ board are coloured black and the rest white. Every white square shares a side with a black square. Every pair of black squares can be joined by chain of black squares, so that consecutive members of the chain share a side. Show that there are at least $\tfrac{n^2-2}{3}$ black squares.
+	
+	
+	\item %https://cms.math.ca/Competitions/OMC/archive/sol2006.pdf
+	Consider a round-robin tournament with $2n + 1$ teams, where each team plays each other team exactly once. We say
+	that three teams $X$, $Y$ and $Z$, form a \emph{cycle triplet} if $X$ beats $Y$ , $Y$ beats $Z$, and $Z$ beats $X$. There are no ties.
+	\begin{enumerate}
+		\item 
+		Determine the minimum number of cycle triplets possible.
+		\item 
+		Determine the maximum number of cycle triplets possible.
+	\end{enumerate}
+	 
+	\item % https://artofproblemsolving.com/wiki/index.php?title=2001_IMO_Shortlist_Problems/C3
+	Define a $k$-clique to be a set of $k$ people such that every pair of them are acquainted with each other. At a certain party, every pair of 3-cliques has at least one person in common, and there are no 5-cliques. Prove that there are two or fewer people at the party whose departure leaves no 3-clique remaining.	
+	
+	
+\end{enumerate}
+
+
+\end{document}

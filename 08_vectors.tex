@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\relpenalty=10000
+\binoppenalty=10000
+
+\begin{document}
+
+\section{Vectors}
+\subsection{Rules}
+\begin{enumerate}
+\item
+The angle between vectors $\mathbf{a}$ and $\mathbf{b}$ is the angle one should rotate vector $\mathbf{a}$ to align it with $\mathbf{b}$.
+Then:
+\begin{enumerate}
+\item 	
+$\angle (\mathbf{a},\mathbf{b}) = - \angle (\mathbf{b},\mathbf{a})$
+\item 
+$\angle (\mathbf{a},\mathbf{b}) + \angle (\mathbf{b},\mathbf{c}) = \angle (\mathbf{a},\mathbf{c})$
+\item
+$\angle (\mathbf{a},\mathbf{b}) = \angle (\mathbf{-a},\mathbf{b}) - 180 ^\circ$
+\end{enumerate}
+
+\item 
+The dot product (also inner product or scalar product) of vectors $\mathbf{a}$ and $\mathbf{b}$ is: \\
+$$\mathbf{a} \cdot \mathbf{b} \equiv (\mathbf{a},\mathbf{b}) = \abs{\mathbf{a}} \abs{\mathbf{b}} \cos \angle (\mathbf{a},\mathbf{b}) $$
+Then:
+\begin{enumerate}
+\item 
+$\mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a}$
+\item 
+$\abs{\mathbf{a} \cdot \mathbf{b}} \leq  \abs{\mathbf{a}} \abs{\mathbf{b}} $ 
+\item
+$(\lambda \mathbf{a} + \mu \mathbf{b}) \cdot \mathbf{c} = \lambda \mathbf{a} \cdot \mathbf{c} + \mu \mathbf{b} \cdot \mathbf{c}$
+\item 
+If $\abs{\mathbf{a}},\abs{\mathbf{b}} \ne 0$,then $\mathbf{a} \cdot \mathbf{b}=0$ if and only if when $\mathbf{a} \perp \mathbf{b}$.
+\end{enumerate}
+\item 
+The cross product (also vector product) of vectors $\mathbf{a}$ and $\mathbf{b}$ has direction for which $\mathbf{c} \perp \mathbf{a}$ and $\mathbf{c} \perp \mathbf{b}$ and magnitude of: \\
+$$\abs{\mathbf{a} \cross \mathbf{b}} = \abs{\mathbf{a}} \abs{\mathbf{b}} \sin \angle (\mathbf{a},\mathbf{b})$$ \\
+Alternatively:
+$$ \mathbf{a} \cross \mathbf{b} = \det
+\left(
+\begin{matrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 
+\end{matrix}
+\right)
+$$
+where $\mathbf{i},\mathbf{j},\mathbf{k}$ are unit vectors. Then:
+\begin{enumerate}
+\item 
+$\mathbf{a} \cross \mathbf{b} = - \mathbf{b} \cross \mathbf{a} $
+\item 
+$(\lambda \mathbf{a} + \mu \mathbf{b}) \times \mathbf{c} = \lambda \mathbf{a} \times \mathbf{c} + \mu \mathbf{b} \times \mathbf{c}$
+
+\item 
+If $\abs{\mathbf{a}},\abs{\mathbf{b}} \ne 0$,then $\mathbf{a} \cross \mathbf{b}=0$ if and only if when $\mathbf{a} \parallel \mathbf{b}$.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+\subsection{Problems}
+\begin{enumerate}
+\item
+Prove that $\abs{\mathbf{a} + \mathbf{b}}^2 + \abs{\mathbf{a} - \mathbf{b}}^2 = 2(\abs{\mathbf{a}}^2 + \abs{\mathbf{b}}^2)$.
+
+\item
+Prove that if $(\mathbf{a}+\mathbf{b}) \perp (\mathbf{a}-\mathbf{b})$, then $\abs{\mathbf{a}} = \abs{\mathbf{b}}$.
+
+\item 
+Let $\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC} = 0$ and $\abs{OA}=\abs{OB}=\abs{OC}$. Prove that $ABC$ is an equilateral triangle
+
+\item %Prasolov 13.1
+Prove that it is possible to make another triangle $A_1B_1C_1$ from the medians $AA_1$,$BB_1$,$CC_1$ of a triangle $ABC$. Prove that $\triangle ABC \sim \triangle A_1B_1C_1$ and find their similarity coefficient. 
+
+\item %Prasolov 13.4
+From a point inside a convex $n$-gon, the rays are drawn perpendicular to the sides and intersecting the sides (or their continuations). On these rays the vectors $\mathbf{a_1}, \dots , \mathbf{a_n}$ whose lengths are equal to the lengths of the corresponding sides are drawn. Prove that
+$\mathbf{a_1} + \dots + \mathbf{a_n} = 0$.
+
+
+\item % Prasolov 13.7
+Consider n pairwise non-codirected vectors ($n \geq 3$) whose sum is equal to zero. Prove that there exists a convex $n$-gon such that the set of vectors formed by its sides coincides with the given set of vectors.
+
+\item % Napoleonic triangles
+(\emph{Napoleon's theorem})Three equilateral triangles $ABD$, $BCE$, $CAF$ are constructed outside the triangle $ABC$. Prove that the centres of the constructed triangles form an equilateral triangle. 
+
+\item %Prasolov 13.12
+\begin{enumerate}
+\item Let A, B, C and D be arbitrary points on a plane. Prove that
+$$ \overrightarrow{AB} \cdot \overrightarrow{CD} +
+\overrightarrow{BC} \cdot \overrightarrow{AD} +
+\overrightarrow{CA} \cdot \overrightarrow{BD} = 0
+ $$
+\item Prove that the heights of a triangle intersect at one point.	
+\end{enumerate}
+
+\item %Prasolov 13.13
+Let $O$ be the centre of the circumcircle of triangle $ABC$ and let point $H$
+satisfy $\overrightarrow{OH} = \overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC}$. Prove that $H$ is the intersection point of heights of triangle.
+
+\item %Prasolov 13.19
+Given points $A$, $B$, $C$ and $D$. Prove that $AB^2 + BC^2 + CD^2 + DA^2 \geq AC^2 + BD^2$,
+where the equality is attained only if $ABCD$ is a parallelogram.
+
+\item % Prasolov13.22.
+Points $A_1,\dots, A_n$ lie on a circle with center $O$ and $\overrightarrow{OA_1} +\dots+ \overrightarrow{OA_n}=0$. Prove
+that for any point $X$ we have $XA_1 + \dots + XA_n \geq nR$, where $R$ is the radius of the circle.
+
+
+
+\item 
+Prove Ceva's theorem: $X$, $Y$ and $Z$ are points on the sides $BC$, $CA$ and $AB$ of a triangle $ABC$ respectively. Then, lines $AX$, $BY$,$CZ$ intersect at a single point if and only if
+$$\frac{\overrightarrow{BX}}{\overrightarrow{XC}} \cdot \frac{\overrightarrow{CY}}{\overrightarrow{YA}} \cdot \frac{\overrightarrow{AZ}}{\overrightarrow{ZB}} = 1$$
+
+\item 
+Prove Menelaus's theorem: $X$, $Y$ and $Z$ are points on the sides (or their elongations) $BC$, $CA$ and $AB$ of a triangle $ABC$ respectively. Then, $X$,$Y$ and $Z$ lie on the same line if and only if
+$$\frac{\overrightarrow{BX}}{\overrightarrow{XC}} \cdot \frac{\overrightarrow{CY}}{\overrightarrow{YA}} \cdot \frac{\overrightarrow{AZ}}{\overrightarrow{ZB}} = -1$$
+
+
+\item % IMO-2013-4
+Let $ABC$ be an acute-angled triangle with orthocentre $H$, and let $W$ be a point on the side $BC$, lying strictly between $B$ and $C$. The points $M$ and $N$ are the feet of the altitudes from $B$ and $C$, respectively. Denote by $\omega_1$ the circumcircle of $BWN$, and let $X$ be the point on $\omega_1$ such that $WX$ is a diameter of $\omega_1$. Analogously, denote by $\omega_2$ the circumcircle of $CWM$, and let $Y$ be the point on $\omega_2$ such that $WY$ is a diameter of $\omega_2$. Prove that $X$, $Y$ and $H$ are collinear.
+
+\item 
+Is it possible to construct a triangle for which both coordinates of each vertex are integers?
+
+\item %http://www.math.olympiaadid.ut.ee/eng/archive/prob1314.pdf p12
+The angles of a triangle are $22.5^\circ$, $45^\circ$ and $112.5^\circ$. Prove that inside this triangle there exists a point that is located on the median through one vertex, the angle bisector through another vertex and the altitude through the third vertex.
+
+
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\section{Divisibility}
+\subsection{Rules}
+For integers $a,b,c,d$:
+	\begin{enumerate}
+		\item 
+		If $a \mid b$ and $ c \mid d$ then $ac \mid bd$
+		\item
+		If $a \mid b$ and $a \mid c$, then $a \mid b+c$ 
+		\item 
+		\textbf{Euclid's algorithm.} \\
+		$\gcd (a,b) = \gcd (a,b-a)$ 
+		\item 
+		\textbf{Corollary of Euclid's algorithm.} \\
+		$ax+by=n$ has solution $(x,y)$ in integers if and only if $gcd(a,b) \mid n$
+	\end{enumerate}
+\subsection{Problems}
+\begin{enumerate}
+	\item
+	Prove that if $m-p \mid mn +pq$, then $m-p \mid mq +np$.
+
+	\item 
+	Prove that $17 \mid 2a+3b  \iff 17 \mid 9a+5b$
+
+	\item
+	Prove that it is not possible to find positive integers $n$ and $m>1$, such that ${102^{2017}+103^{2017}=n^m}$
+
+	\item
+	Find all positive integers $d$, such that $d$ divides both: $n^2+1$ and $(n+1)^2+1$
+	
+	\item 
+	Find all prime numbers $p$ for which $p^2+2543$ has less than $16$ positive divisors.
+	
+	\item 
+	Prove that $\gcd (a^m-1,a^n-1)=a^{\gcd(m,n)}-1$
+	
+	\item % BW treening 2011-Q13
+	Prove that any two non-equal integers in form $2^{2^n}+1$, where $n$ is a positive integer are coprime-
+		
+
+	\item % IMO shortlist 1984
+	$a_1,a_2,\dots,a_{2n}$ are mutually distinct integers. Find all integers $x$ satisfying
+	$$(x-a_1)\dots (x-a_{2n}) = (-1)^n(n!)^2$$
+	
+	\item %http://kodu.ut.ee/~zolki/math/bwsess04.pdf 
+	Let $a_0,\dots, a_n \geq -1$ be integers such that at least one of them is non-zero. It is known that $a_0 + 2a_1 +2^2a_2+ \dots + 2^na_n = 0$. Show that $a_0+a_1+\dots + a_n >0$.
+	
+\end{enumerate}
+
+
+\newpage
+\section{Congruences}
+\subsection{Rules}
+For integers $a,b,c,d,m,n$ and prime $p$.
+\begin{enumerate}
+	\item 
+	$a \equiv b \mod m \iff m \mid a-b $
+	\item 
+	$a\equiv b \mod m$ and $ c\equiv d \mod m \implies a+c\equiv b+d \mod m$	
+	\item 
+	$a \equiv b \mod m \iff an \equiv bn \mod mn$
+	\item 
+	$a \equiv b \mod m \implies an \equiv bn \mod m$
+	\item
+	\textbf{Fermat's little theorem.} \\
+	$a^p \equiv a \mod p$
+	\item 
+	\textbf{Wilson's theorem.} \\
+	$(p-1)!\equiv -1 \mod p$
+	
+	
+\end{enumerate}
+
+\subsection{Problems}
+
+\begin{enumerate}
+	\item 
+	Prove that $2018!! + 2017!!$ is divisible by $2019$
+	
+	\item 
+	Find all primes $p$, such that:
+	\begin{enumerate}
+		\item  $p+4$, $p+14$ are primes;
+		\item $8p^2+1$ is a prime;
+		\item $p+10$, $p+1$ is a prime;
+		\item $4p^2+1$, $6p^2+1$ are primes;
+		\item $p^2-6$, $p^2+6$ are primes;
+		\item $p^4-6$ is a prime;
+		\item $p^3+6$, $p^3-6$ are primes;
+		\item $p^2-2$, $2p^2-1$, $3p^2+4$ are primes;
+		\item $2^p+1$, $2^p-1$ are primes;
+		\item $p,q$, $p^q+q^p$ are primes.
+	\end{enumerate}
+	
+	\item 
+	In a series of integers, the next element is obtained by concatenating the element's order number to previous element by using carry. The first elements of the series are therefore:
+	$${1,12,123,1234,\dots,123456789,1234567900,12345679011} $$
+	Find all elements in the series which are divisible by $7$.
+	
+	\item 
+	Prove that there exist no integers $n>1$, such that $n \mid 3^n-2^n$.
+	
+	\item 
+	Find all positive integers $n$ which satisfy the following condition:
+	For all integers $a$ and $b$ which are coprime with $n$
+	$$ a \equiv b  \mod n \iff ab \equiv 1 \mod n$$
+
+	\item
+	Prove that it is not possible to separate $18$ consecutive integers into $2$ subsets with $9$ elements in such way that the product of each subset is equal.
+\end{enumerate}
+
+
+
+
+
+\end{document}

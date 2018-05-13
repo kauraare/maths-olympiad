@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[margin=2.5cm]{geometry}
+
+
+
+\begin{document}
+	\section{Geometry}
+	\begin{itemize}
+	\item
+	The sum of opposite angles in cyclic quadrilateral is $180^\circ$.
+	\item
+	Inscribed angles which subtend to same arc are equal to half of the central angle. 
+	\item
+	Limiting case of the above is alternate segment theorem. The angle between tangent and chord is equal to inscribed angle subtending to the same chord.
+	\end{itemize}
+	
+	
+	\begin{enumerate}
+		\item
+		Find mistake in the "proof that all triangles are isosceles".
+		
+		\item %% LPV 2000 11
+		$PQRS$ is a cyclic quadrilateral in which $\angle PSR = 90^\circ$. Points $H$ and $K$ are projections of point $Q$ to lines $PR$ and $PS$ respectively. Prove that line $HK$ intersects segment $SQ$ at its midpoint.
+		
+		\item %% LPV 2002
+		Point $P$ is chosen on the circumcircle of triangle $ABC$. Points $K$, $L$ and $M$ are projections of $P$ to lines $AB$, $BC$ and $AC$ respectively. Prove that $K$, $L$ and $M$ lie on the same line.
+  		
+		\item %% problem solving strategies
+		One of the cross sections in a rectangular box is a regular hexagon. Prove that the rectangular box is a cube.
+		
+
+	\end{enumerate}
+	\section{Trigonometry}
+		\begin{itemize}
+			\item
+			Sine law:
+			$$\frac{a}{\sin \alpha}=\frac{b}{\sin \beta}=\frac{c}{\sin \gamma}=2R $$
+			\item
+			Cosine law:
+			$$ c^2=a^2+b^2-2ab\cos\gamma $$
+			\item
+			Trigonometric functions of sums:
+			$$ \sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta $$
+			$$ \cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta $$
+		\end{itemize}
+		\begin{enumerate}
+			\item %% Prasolov 1.19
+			A straight line passing through vertex $A$ of square $ABCD$ intersects side $CD$ at $E$ and line $BC$ at $F$. Prove that $\frac{1}{|AE|^2}+\frac{1}{|AF|^2} =
+			\frac{1}{|AB|^2}$.
+			\item
+			An equilateral triangle is inscribed in a circle. An arbitrary point $P$ is chosen on arc $BC$. Prove that $|MA|=|MB|+|MC|$
+			\item %% Prasolov 1.25
+			Angles $\alpha$ and $\beta$ of $\triangle ABC$ are related as $3\alpha+2\beta=180^\circ$. Prove that $a^2+bc=c^2$.
+			\item %% Prasolov 12.49
+			Prove that for non right angle triangle with circumcircle radius $R$ and area $S$ the following holds
+			$$ \tan\alpha+\tan\beta+\tan\gamma=\tan\alpha\tan\beta\tan\gamma=\frac{4S}{a^2+b^2+c^2-8R^2}$$
+		\end{enumerate}
+	
+	\newpage
+	
+	\section{Functional equations}
+		\begin{enumerate}  
+			\item %% LVS 2016		
+			Find all functions defined on all real numbers which satisfy for  all $(x,y)$
+			$$f(x+y)f(xy)=f(x^2-y^2-1) $$
+			\item %% LVS 2015
+			Find all functions defined on all real numbers which satisfy for all $(x,y)$
+			$$f(f(x)+f(y))=f(x)+y $$
+			\item %% LVT 2014
+			Find all functions defined on all real numbers which satisfy for all $(x,y)$
+			$$f(x^2)+f(xy)=f(f(x+y)) $$
+			\item %%  problemsolvingstrategies p277
+			Find all polynomial functions that satisfy $P(x+1)=P(x)+2x+1$
+			\item%%  problemsolvingstrategies p277
+			Find all solutions to functional equation $f(x+y) + f(x-y) = 2f(x)\cos y$
+			
+			
+		\end{enumerate}
+	
+	\section{Algebra}
+		Mean inequalities:
+		$$\min (a,b,c) \leq \frac{3}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}} \leq \sqrt[3]{abc} \leq \frac{a+b+c}{3} \leq \sqrt{\frac{a^2+b^2+c^2}{3}} \leq \max (a,b,c)$$
+		\\
+		Cauchy-Schwarz inequality
+		$$(a_1b_1+...+a_nb_n)^2 \leq (a_1^2+...+a_n^2)(b_1^2+...+b_n^2) $$
+		Geometric series
+		$$ 1+a+a^2+...a^{n-1}=\frac{a^n-1}{a-1} $$
+		
+		
+		\begin{enumerate}
+		\item
+		Prove that
+		$$\frac{x^2+2}{\sqrt{x^2+1}} \geq 2 $$
+		\item
+		Prove that
+		$$ a^2+b^2+c^2 \geq ab+bc+ac $$
+		\item
+		Find sum
+		$$ \frac{1}{1 \times 2} + \frac{1}{2 \times 3} +...+ \frac{1}{(n-1)\times n} $$
+		\item
+		Prove that
+		$$ 1+2^2+3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6} $$
+		\item
+		Let $n \geq 3$ be an integer, and let $a_2$, $a_3$, ..., $a_n$ be positive real numbers such that $a_2a_3...a_n = 1$. Prove that
+		$$(1 + a_2)^2(1 + a_3)^3...(1 + a_n)^n > n^n$$			
+		\end{enumerate}
+	
+	\newpage
+	
+	\section{Number Theory}
+	Fermat's Little theorem for prime number $p$ and integer $a$
+	$$ a^p \equiv a  \pmod p$$
+	Euclidian algorithm
+	$$ \gcd(a,b)=\gcd(a-b,b)$$
+	\begin{enumerate}
+		\item
+		Prove that $a^4+4b^4$ is not a prime given $a,b$ are positive integers.
+		\item
+		Find integer solutions $(x,y)$ in terms of prime $p$ for equation
+		$$ \frac{1}{x}+\frac{1}{y}=\frac{1}{p} $$
+		\item
+		Find all solutions $(x,y,z)$ in integers for
+		$$ x^2 + y^2 + z^2 = 2xyz $$ 
+		\item
+		Find all prime numbers that are the factors of any number in form of
+		$\underbrace{111...111}_{n}$ for positive integers $n$.
+		\item
+		Positive integers $a,b$ satisfy
+		$$ a-b = 5b^2-4a^2 > 0$$
+		Show that $a-b$ is a square of an integer.
+	\end{enumerate}
+	
+	\section{Combinatorics}
+	\begin{enumerate}
+		\item
+		There are 6 people in the room. Each pair of people either knows one another or they do not. Prove that there either 3 people among whom nobody knows another or 3 people among whom all people know one another.
+		\item
+		Is it possible to cover 2018x2018 board with L-shaped pieces (length 3, width 2) without overlapping?
+		\item
+		Is it possible to find 5 prime numbers, so that sum of each three of those is also a prime?
+		
+		\item
+		On the table there are 13 blue chips, 15 red chips and 17 green chips. In each move two chips of different colour are taken from the table and replaced with two chips of the third colour. Is it possible that after some moves there are equal amount of chips of each colour?
+		
+		\item
+		Each face of a cube is coloured with a different colour. How many distinct colourings are there?
+		 
+	\end{enumerate}
+	
+\end{document}

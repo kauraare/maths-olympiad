@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{eqnarray}
+\usepackage[utf8]{inputenc}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+
+\begin{document}
+
+\section{Polynomials}
+
+\textbf{Definition 1.}  Polynomial function $P \colon \mathbb{R} \to \mathbb{R}$ can be presented in the form of
+$$P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$$
+where $a_0,\dots,a_n$ are real numbers called the polynomial coefficients. Largest $n$ for which $a_n\ne 0$ is called the degree of polynomial.
+
+
+\textbf{Theorem 2 (Bezout's theorem).}
+A polynomial $P(x)$ is divisible by the binomial $(x-a)$ if and only if $P(a)=0$.
+
+\textbf{Theorem 3 (The fundamental theorem of algebra).}
+Every non-constant polynomial has a complex root.
+
+\textbf{Theorem 4 (The rational root theorem).} If $x = p/q$ is a rational zero
+of a polynomial $P(x) = a_nx^n +\hdots +a_0$ with integer coefficients and $(p, q)=1$,
+then $p | a_0$ and $q | a_n$.
+
+\textbf{Theorem 5 (Vieta's formulae).} If the solutions polynomial of degree $n$ are $x_1,x_2,\dots,x_n$ and  $a_n=1$, then the following holds:
+\begin{eqnarray*}
+x_1+x_2+\ldots+x_n &=& -a_{n-1},\\
+x_1x_2+x_1x_3+\ldots+x_{n-1}x_{n} &=& \hphantom{-} a_{n-2}, \\
+x_1x_2x_3+x_1x_2x_4+\ldots+x_{n-2}x_{n-1}x_n &=& -a_{n-3},\\
+\ldots \\
+x_1x_2\ldots x_n &=& (-1)^n a_0.
+\end{eqnarray*}
+
+\begin{enumerate}
+
+\item
+Find the roots of polynomial $P(x)=x^5-x^4-13x^3+x^2+12x$.
+
+\item % Talvine lahtine võistlus 2010, noorem rühm
+Find the value of $x^5+2x^2-4x+2010$ given that $x^3+2x+2=0$.
+
+\item
+How many points do we need to uniquely define a polynomial of degree $n$?
+
+\item
+The roots for polynomial $P_2(x)=ax^2+bx+c$ are $x_1$ and $x_2$. Find the coefficients for third order polynomial which has roots $x_1^2$, $x_2^2$ and $x_1x_2$.
+
+\item % PSS 24
+In $x^3+px^2+qx+r$ one root is the sum of the two others. Find the relationship between $p$, $q$ and $r$. 
+
+\item % http://eqworld.ipmnet.ru/en/solutions/ae/ae0106.pdf
+Find the roots of the polynomial $P(x)=ax^4+bx^3+cx^2+bx+a$
+
+
+\item %PSS 31
+Polynomial with integer coefficients $ax^3+bx^2+cx+d$ has $ad$ odd and $bc$ even. Show that at least one zero of the polynomial is irrational.
+
+\item % PRoblem solving strategies 72
+Polynomial of degree $n$ with non-negative coefficients and leading coefficient $1$ has $n$ real roots. Prove that $P(2)\geq 3^n$. 
+
+
+\end{enumerate}
+
+\end{document}
