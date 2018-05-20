@@ -13,7 +13,7 @@
 \begin{document}
 
 \section*{Graph theory}
-\subsection*{Theory}
+\subsection*{Terminology}
 \begin{enumerate}
 	\item 
 	Graph $G(V,E)$ is set of \emph{vertices} $V$ and \emph{edges} $E$ (pairs of vertices). If there is an edge $(x,y) \in E$, then $x$ and $y$ are said to be \emph{connected}.
@@ -55,6 +55,30 @@
 \end{enumerate}
 
 \newpage
+\subsection*{Theorems}
+	\begin{enumerate}
+		\item \textbf{Ramsey's theorem: } For positive integers $r_1,\dots,r_k$, there exists a finite Ramsey number. 
+		\begin{enumerate}
+		 	\item case $k=2$ \\
+		 	Ramsey number $R(r_1,r_2)$ is a minimal number of people at the party such that there are either $r_1$ people who know each other or $r_2$ people who do not.
+		 	\item General case for $k$ \\
+		 	Ramsey's number of $R(r_1,r_2,\dots,r_k)$ is the minimal number of points in a complete graph whose edges are coloured with $k$ different colours, such that there exists a colour $i$ for which we can find $r_i$ vertices that are all connected with edges of colour $i$.
+		\end{enumerate}
+		
+		\item \textbf{Kuratowski's theorem} % http://www.math.caltech.edu/~2014-15/2term/ma006b/10%20Planar3.pdf
+		\begin{enumerate}
+			\item $K_n$ is a complete graph with $n$ vertices and $K{n,m}$ is a complete bipartite graph with $n$ and $m$ vertices in the subsets.
+			\item Graphs $K_5$ and $K_{3,3}$ are non-planar.
+			\item Every non-planar graph contains a subgraph which can be obtained from one of these graphs by a subdivision of its edges.
+		
+		\end{enumerate}
+		\item \textbf{Hall's marriage theorem} % http://www.math.cornell.edu/~levine/18.312/alg-comb-lecture-16.pdf
+		\begin{enumerate}
+			\item In a set of $n$ women and $n$ men, a woman $a_i$ is happy to be married to any man in set $A_i$ and a man is happy to marry a woman who wants to marry him. Hall's marriage theorem states that each person can be happily married if and only if the sets $A_1,A_2,\dots,A_n$ meets the marriage condition.
+			\item The marriage condition states that for any subset of women $I$, the number of men whom at least one woman would be happy to marry $\abs{\bigcup_{i \in I}A_i} \geq \abs{I}$
+		\end{enumerate}
+	\end{enumerate}
+
 \subsection*{Problems}
 \begin{enumerate}
 	\item
@@ -74,10 +98,8 @@
 	between the caves and returns to its own cave in the end of its campaign. It is also known that
 	no path between two caves is used by more than one campaign-making animal.
 	\begin{enumerate}
-		\item
-		Prove that for any prime $n$, the maximum possible number of campaign-making animals is $\tfrac{n-1}{2}$
-		\item 
-		Find the maximum number of campaign-making animals for $n = 9$.	
+		\item Prove that for any prime $n$, the maximum possible number of campaign-making animals is $\tfrac{n-1}{2}$
+		\item Find the maximum number of campaign-making animals for $n = 9$.	
 	\end{enumerate}
 	
 	\item % https://mks.mff.cuni.cz/kalva/usa/usoln/usol991.html
@@ -88,16 +110,29 @@
 	Consider a round-robin tournament with $2n + 1$ teams, where each team plays each other team exactly once. We say
 	that three teams $X$, $Y$ and $Z$, form a \emph{cycle triplet} if $X$ beats $Y$ , $Y$ beats $Z$, and $Z$ beats $X$. There are no ties.
 	\begin{enumerate}
-		\item 
-		Determine the minimum number of cycle triplets possible.
-		\item 
-		Determine the maximum number of cycle triplets possible.
+		\item Determine the minimum number of cycle triplets possible.
+		\item Determine the maximum number of cycle triplets possible.
 	\end{enumerate}
 	 
 	\item % https://artofproblemsolving.com/wiki/index.php?title=2001_IMO_Shortlist_Problems/C3
 	Define a $k$-clique to be a set of $k$ people such that every pair of them are acquainted with each other. At a certain party, every pair of 3-cliques has at least one person in common, and there are no 5-cliques. Prove that there are two or fewer people at the party whose departure leaves no 3-clique remaining.	
 	
+	\item 
+	For integers $r,n$ where $r<n$ a grid $r \times n$ is populated with numbers $1,2,\dots,n$, such that no number occurs twice in any row or column. Prove that it is possible to append $n-r$ rows, so that the condition is still met in the new $n \times n$ grid.
 	
+	\item % https://www.imo-official.org/problems/IMO2010SL.pdf
+	On some planet, there are $2^N$ countries $(N \geq 4)$. Each country has a flag $N$ units wide and one unit high composed of $N$ fields of size $1 \times 1$, each field being either yellow or blue. No two countries have the same flag. We say that a set of $N$ flags is \emph{diverse} if these flags can be arranged into an $N \times N$ square so that all $N$ fields on its main diagonal will have the same colour. Determine the smallest positive integer $M$ such that among any $M$ distinct flags, there exist $N$ flags forming a diverse set.
+	
+	\item %TVV-2018-5
+	Let $k$ be a positive integer. Find all positive integers $n$ for which it is possible to choose $n$ points on the sides of a triangle (different from its vertices) and connect some of them with a line such that
+	\begin{enumerate}
+		\item There is at least $1$ point on each side
+		\item For each pair of points $X$ and $Y$ which are on different sides of the triangle, there exists exactly $k$ points on the third side which are all connected to both $X$ and $Y$, and exactly $k$ points which are all connected to neither of $X$ or $Y$.
+	\end{enumerate}
+	
+	\item %Valgevene (TVV2018-5-vana)
+	A country has $n \geq 3$ airports. Two-way flights operate between between some pairs of the airports. It is known that for each pair of airports, there exists a third one which is not directly connected to either of them. Find the maximum number of two-way flights.
+
 \end{enumerate}
 
 
