@@ -9,19 +9,20 @@
 \setlength{\parskip}{1em}
 \relpenalty=10000
 \binoppenalty=10000
+\renewcommand{\thesubsection}{\arabic{subsection}}
 
 \begin{document}
 \section*{Functional equations}
 
-\subsection*{Injective and surjective functions}
-	\begin{enumerate}
+\subsection{Injective and surjective functions}
+	\begin{itemize}
 		\item 
 		If $f(x)=f(y) \Rightarrow x=y$, then $f$ is injective
 		\item 
 		If for each element $y$ in function codomain, there exists $x$ for which $f(x)=y$, then $f$ is surjective.
 		\item
 		If $f$ is both injective and surjective then $f$ is bijective.
-	\end{enumerate}
+	\end{itemize}
 
 	\subsubsection*{Problems}
 		\begin{enumerate}
@@ -34,51 +35,65 @@
 			$$f(x + f(y)) = f(x) + y$$
 		\end{enumerate}
 
-	\subsection*{Cauchy functional equations}
-		\begin{enumerate}
+	\subsection{Cauchy functional equations}
+		\begin{itemize}
 			\item
 			Find all functions $f: \mathbb{Q} \to \mathbb{Q}$ for which $f(x)+f(y)=f(x+y)$.
 			\item
-			Find all functions $f: \mathbb{Q^+} \to \mathbb{Q^+PM}$ for which $f(x)f(y)=f(xy)$.
+			Find all functions $f: \mathbb{Q^+} \to \mathbb{Q^+}$ for which $f(x)f(y)=f(xy)$.
 			\item
 			Find all functions $f: \mathbb{Q^+} \to \mathbb{Q}$ for which $f(x)+f(y)=f(xy)$.
 			\item
 			Find all functions $f: \mathbb{Q} \to \mathbb{Q^+}$ for which $f(x)f(y)=f(x+y)$.
 			\item 
-			If in questions 1-4 any of the following conditions is satisfied, prove that the solutions are the same for $f: \mathbb{R} \to \mathbb{R}$.
-			\begin{enumerate}
+			If the preceding functional equalities satisfy any one of the following conditions, find the solutions for functions defined for real numbers in the respective ranges.
+			\begin{itemize}
 				\item The function is continuous at one point,
 				\item The function is monotonic on any interval,
 				\item The function is bounded on any interval.
-			\end{enumerate}
-		\end{enumerate}
+			\end{itemize}
+		\end{itemize}
 		\subsubsection*{Problems}
 			\begin{enumerate}[resume]
 				\item Find all functions $f: \mathbb{Q} \to \mathbb{Q}$ for which
 				$$f(x+y) + f(x-y) = 2f(x) + 2f(y) $$
+				\item 
+				
 			\end{enumerate}
 
-\subsection*{Recurrence relations}
-\begin{itemize}
-	\item 
-	A recurrence relation is a relation that determines the elements of a sequence $x_n, n \in \mathbb{N_0}$, as a function of previous elements. A recurrence relation of the form
-	$$(\forall n \geq k) \hspace{2em} x_n + a_1x_n-1 + \hdots + a_kx_{n-k} = 0$$
-	for constants $a_1, \hdots, a_k$ is called a linear homogeneous recurrence relation of order $k$.
-	\item
-	We define the characteristic polynomial of the relation as 
-	$$P(x) = x^k + a_1x^{k-1} + \hdots + a_k$$
-	\item
-	Let $P(x)$	factorize as 
-	$$P(x) = (x-\alpha_1)^{k_1}(x-\alpha_2)^{k_2} \hdots (x-\alpha_r)^{k_r}$$
-	where $\alpha_1, \hdots , \alpha_r$ are distinct complex numbers and $k_1, \hdots, k_r$ are positive integers. 
-	\item 
-	The general solution of this recurrence relation is in this case given by
-	$$x_n = p_1(n)\alpha_1^n + p_2(n)\alpha_2^n + \hdots + p_r(n)\alpha_r^n$$
-	where $p_i$ is a polynomial of degree less than $k_i$.
-	\item
-	In particular, if $P(x)$ has $k$
-	distinct roots, then all $p_i$ are constant.
-	\item 
-	If $x_0, \hdots, x_{k-1}$ are set, then the coefficients of the polynomials are uniquely determined.
-\end{itemize}
+	\subsection{Recurrence relations}
+		\begin{itemize}
+			\item 
+			A recurrence relation is a relation that determines the elements of a sequence $x_n, n \in \mathbb{N_0}$, as a function of previous elements. A recurrence relation of the form
+			$$(\forall n \geq k) \hspace{2em} x_n + a_1x_n-1 + \hdots + a_kx_{n-k} = 0$$
+			for constants $a_1, \hdots, a_k$ is called a linear homogeneous recurrence relation of order $k$.
+			\item
+			We define the characteristic polynomial of the relation as 
+			$$P(x) = x^k + a_1x^{k-1} + \hdots + a_k$$
+			\item
+			Let $P(x)$	factorize as 
+			$$P(x) = (x-\alpha_1)^{k_1}(x-\alpha_2)^{k_2} \hdots (x-\alpha_r)^{k_r}$$
+			where $\alpha_1, \hdots , \alpha_r$ are distinct complex numbers and $k_1, \hdots, k_r$ are positive integers. 
+			\item 
+			The general solution of this recurrence relation is in this case given by
+			$$x_n = p_1(n)\alpha_1^n + p_2(n)\alpha_2^n + \hdots + p_r(n)\alpha_r^n$$
+			where $p_i$ is a polynomial of degree less than $k_i$.
+			\item
+			In particular, if $P(x)$ has $k$
+			distinct roots, then all $p_i$ are constant.
+			\item 
+			If $x_0, \hdots, x_{k-1}$ are set, then the coefficients of the polynomials are uniquely determined.
+		\end{itemize}
+			
+			\subsubsection*{Problems}
+			\begin{enumerate}[resume]
+				\item 
+				Find the closed form expression for $n$-th term of the Fibonacci sequence.
+				\item
+				Let $S_n$ denote the number of ternary sequences (consisting of $0$,$1$, and $2$s) of length $n$, such that they do not contain a substring of "10", "01", or "11". Find a closed form expression for $S_n$.
+				\item
+				Let $r$ be a real number, and let $x_n$ be a sequence such that $x_0 = 0, x_1 = 1$, and $x_{n+2} = rx_{n+1} - x_n$ for $n \ge 0$. For which values of $r$ does $x_1 + x_3 + \cdots + x_{2m-1} = x_m^2$ for all positive integers $m$?
+				\item
+				Let $a_{n}$, $b_{n}$, and $c_{n}$ be geometric sequences with different common ratios and let $a_{n}+b_{n}+c_{n}=d_{n}$ for all integers $n$. If $d_{1}=1$, $d_{2}=2$, $d_{3}=3$, $d_{4}=-7$, $d_{5}=13$, and $d_{6}=-16$, find $d_{7}$.
+			\end{enumerate}	
 \end{document}
