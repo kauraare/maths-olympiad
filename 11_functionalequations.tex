@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\relpenalty=10000
+\binoppenalty=10000
+
+\begin{document}
+\section*{Functional equations}
+
+\subsection*{Injective and surjective functions}
+	\begin{enumerate}
+		\item 
+		If $f(x)=f(y) \Rightarrow x=y$, then $f$ is injective
+		\item 
+		If for each element $y$ in function codomain, there exists $x$ for which $f(x)=y$, then $f$ is surjective.
+		\item
+		If $f$ is both injective and surjective then $f$ is bijective.
+	\end{enumerate}
+
+	\subsubsection*{Problems}
+		\begin{enumerate}
+			\item
+			Let $f: X \to Y$ and $g: Y \to X$ and $g(f(x))=x$. 
+			\item 
+			Prove that for any function $f: X \to Y$, there exists a set $Z$ and functions $g: X \to Z$ and $h: Z\to Y$, such that $g$ is injective and $f$ is surjective.
+			\item 
+			Find all strictly monotonous functions $f: \mathbb{R} \to \mathbb{R}$ which satisfy 
+			$$f(x + f(y)) = f(x) + y$$
+		\end{enumerate}
+
+	\subsection*{Cauchy functional equations}
+		\begin{enumerate}
+			\item
+			Find all functions $f: \mathbb{Q} \to \mathbb{Q}$ for which $f(x)+f(y)=f(x+y)$.
+			\item
+			Find all functions $f: \mathbb{Q^+} \to \mathbb{Q^+PM}$ for which $f(x)f(y)=f(xy)$.
+			\item
+			Find all functions $f: \mathbb{Q^+} \to \mathbb{Q}$ for which $f(x)+f(y)=f(xy)$.
+			\item
+			Find all functions $f: \mathbb{Q} \to \mathbb{Q^+}$ for which $f(x)f(y)=f(x+y)$.
+			\item 
+			If in questions 1-4 any of the following conditions is satisfied, prove that the solutions are the same for $f: \mathbb{R} \to \mathbb{R}$.
+			\begin{enumerate}
+				\item The function is continuous at one point,
+				\item The function is monotonic on any interval,
+				\item The function is bounded on any interval.
+			\end{enumerate}
+		\end{enumerate}
+		\subsubsection*{Problems}
+			\begin{enumerate}[resume]
+				\item Find all functions $f: \mathbb{Q} \to \mathbb{Q}$ for which
+				$$f(x+y) + f(x-y) = 2f(x) + 2f(y) $$
+			\end{enumerate}
+
+\subsection*{Recurrence relations}
+\begin{itemize}
+	\item 
+	A recurrence relation is a relation that determines the elements of a sequence $x_n, n \in \mathbb{N_0}$, as a function of previous elements. A recurrence relation of the form
+	$$(\forall n \geq k) \hspace{2em} x_n + a_1x_n-1 + \hdots + a_kx_{n-k} = 0$$
+	for constants $a_1, \hdots, a_k$ is called a linear homogeneous recurrence relation of order $k$.
+	\item
+	We define the characteristic polynomial of the relation as 
+	$$P(x) = x^k + a_1x^{k-1} + \hdots + a_k$$
+	\item
+	Let $P(x)$	factorize as 
+	$$P(x) = (x-\alpha_1)^{k_1}(x-\alpha_2)^{k_2} \hdots (x-\alpha_r)^{k_r}$$
+	where $\alpha_1, \hdots , \alpha_r$ are distinct complex numbers and $k_1, \hdots, k_r$ are positive integers. 
+	\item 
+	The general solution of this recurrence relation is in this case given by
+	$$x_n = p_1(n)\alpha_1^n + p_2(n)\alpha_2^n + \hdots + p_r(n)\alpha_r^n$$
+	where $p_i$ is a polynomial of degree less than $k_i$.
+	\item
+	In particular, if $P(x)$ has $k$
+	distinct roots, then all $p_i$ are constant.
+	\item 
+	If $x_0, \hdots, x_{k-1}$ are set, then the coefficients of the polynomials are uniquely determined.
+\end{itemize}
+\end{document}
