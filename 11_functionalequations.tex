@@ -10,6 +10,7 @@
 \relpenalty=10000
 \binoppenalty=10000
 \renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand*{\theenumi}{\thesubsection.\arabic{enumi}}
 
 \begin{document}
 \section*{Functional equations}
@@ -35,39 +36,49 @@
 			$$f(x + f(y)) = f(x) + y$$
 		\end{enumerate}
 
-	\subsection{Cauchy functional equations}
-		\begin{itemize}
+	\subsection{Cauchy functional equations} % Most from Engel book
+		\begin{enumerate}
 			\item
 			Find all functions $f: \mathbb{Q} \to \mathbb{Q}$ for which $f(x)+f(y)=f(x+y)$.
-			\item
-			Find all functions $f: \mathbb{Q^+} \to \mathbb{Q^+}$ for which $f(x)f(y)=f(xy)$.
-			\item
-			Find all functions $f: \mathbb{Q^+} \to \mathbb{Q}$ for which $f(x)+f(y)=f(xy)$.
-			\item
-			Find all functions $f: \mathbb{Q} \to \mathbb{Q^+}$ for which $f(x)f(y)=f(x+y)$.
-			\item 
-			If the preceding functional equalities satisfy any one of the following conditions, find the solutions for functions defined for real numbers in the respective ranges.
+			\item \label{conditions}
+			If the above functional equation satisfies any one of the following conditions, find the solutions to the functional equation if $f: \mathbb{R} \to \mathbb{R}$.
 			\begin{itemize}
 				\item The function is continuous at one point,
 				\item The function is monotonic on any interval,
 				\item The function is bounded on any interval.
 			\end{itemize}
-		\end{itemize}
-		\subsubsection*{Problems}
-			\begin{enumerate}[resume]
-				\item Find all functions $f: \mathbb{Q} \to \mathbb{Q}$ for which
-				$$f(x+y) + f(x-y) = 2f(x) + 2f(y) $$
-				%\item 
-				%Find all functions $f: \mathbb{R} \to \mathbb{R}$ which satisfy $f(x)=f(x/2)$
-			\end{enumerate}
-
-	\subsection{Recurrence relations}
+			\item \label{eq:pow}
+			Find all functions $f: \mathbb{R^+} \to \mathbb{R^+}$ for which $f(x)f(y)=f(xy)$, given it satisfies any of the constraints defined in question \ref{conditions}. 
+			
+			\item \label{eq:log}
+			Find all functions $f: \mathbb{R^+} \to \mathbb{R}$ for which $f(x)+f(y)=f(xy)$, given it satisfies any of the constraints defined in question \ref{conditions}.
+			
+			\item \label{eq:exp}
+			Find all functions $f: \mathbb{R} \to \mathbb{R^+}$ for which $f(x)f(y)=f(x+y)$, given it satisfies any of the constraints defined in question \ref{conditions}.
+			
+			\item  In what domains are the solutions of the functional equations defined in questions \ref{eq:pow}-\ref{eq:exp} the only solutions if they are not subject to any of the constraints defined in \ref{conditions}?
+			
+			\item Find all continuous functions $f: \mathbb{R} \to \mathbb{R}$ for which
+			$$f(x+y) + f(x-y) = 2f(x) + 2f(y) $$
+			
+			\item Find all continuous functions $f: \mathbb{R} \to \mathbb{R}$ for which
+			$$f(x+y) + f(x-y) = 2f(y) $$
+			
+			\item Find all continuous functions $f: \mathbb{R} \to \mathbb{R}$ for which
+			$$f(x+y) + f(x-y) = 2f(x) $$
+			
+			\item Find all continuous functions $f: \mathbb{R} \to \mathbb{R}$ for which
+			$$f(x+y) + f(x-y) = 2f(x) f(y) $$
+				
+	\end{enumerate}
+	
+	\subsection{Recurrence relations} % https://artofproblemsolving.com/wiki/index.php/Characteristic_polynomial
 		\begin{itemize}
 			\item 
 			A recurrence relation is a relation that determines the elements of a sequence $x_n, n \in \mathbb{N_0}$, as a function of previous elements. A recurrence relation of the form
 			$$(\forall n \geq k) \hspace{2em} x_n + a_1x_n-1 + \hdots + a_kx_{n-k} = 0$$
 			for constants $a_1, \hdots, a_k$ is called a linear homogeneous recurrence relation of order $k$.
-			\item
+			\item	
 			We define the characteristic polynomial of the relation as 
 			$$P(x) = x^k + a_1x^{k-1} + \hdots + a_k$$
 			\item
@@ -86,7 +97,7 @@
 		\end{itemize}
 			
 			\subsubsection*{Problems}
-			\begin{enumerate}[resume]
+			\begin{enumerate}
 				\item 
 				Find the closed form expression for $n$-th term of the Fibonacci sequence.
 				\item
@@ -95,5 +106,5 @@
 				Let $r$ be a real number, and let $x_n$ be a sequence such that $x_0 = 0, x_1 = 1$, and $x_{n+2} = rx_{n+1} - x_n$ for $n \ge 0$. For which values of $r$ does $x_1 + x_3 + \cdots + x_{2m-1} = x_m^2$ for all positive integers $m$?
 				\item
 				Let $a_{n}$, $b_{n}$, and $c_{n}$ be geometric sequences with different common ratios and let $a_{n}+b_{n}+c_{n}=d_{n}$ for all integers $n$. If $d_{1}=1$, $d_{2}=2$, $d_{3}=3$, $d_{4}=-7$, $d_{5}=13$, and $d_{6}=-16$, find $d_{7}$.
-			\end{enumerate}	
+			\end{enumerate}
 \end{document}
