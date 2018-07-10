@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\relpenalty=10000
+\binoppenalty=10000
+\DeclareMathOperator{\lcm}{lcm}
+
+\begin{document}	
+\section*{Invariance principle}
+\begin{enumerate}
+	\item 
+	Invariant is a property that remains unchanged when transformations are applied
+	\item
+	Monovariant is a property that always changes in the same direction when transformations are applied.
+
+\end{enumerate}
+	\section*{Problems}
+	\begin{enumerate}
+		\item % Engel book
+		$2n$ people are sitting at a table, each having $n-1$ enemies the most. Prove that it is possible that nobody is sitting next to its enemy.
+		\item % http://www-bcf.usc.edu/~pengshi/math149/talk2.pdf 
+		Start with a finite sequence $a_1, a_2,\dots, a_n$ of positive integers. If possible,
+		choose two indices $j < k$ such that $a_j$ does not divide $a_k$ , and replace $a_j$
+		and $a_k$ by $\gcd(a_j, a_k)$ and $\lcm (a_j, a_k )$, respectively. Prove that if this
+		process is repeated, it must eventually stop.
+		
+		\item % http://webcache.googleusercontent.com/search?q=cache%3Awww.math.olympiaadid.ut.ee%2Feng%2Farchive%2Fbw%2Fbw07sol.pdf&oq=cache%3Awww.math.olympiaadid.ut.ee%2Feng%2Farchive%2Fbw%2Fbw07sol.pdf&aqs=chrome..69i57j69i58.1714j0j4&sourceid=chrome&ie=UTF-8
+		Freddy writes down numbers $1, 2,\dots, n$ in some order. Then he makes a list of all pairs $(i, j)$ such that $1 \leq i < j \leq n$ and the $i$th number is bigger than the $j$th number in his permutation. After that, Freddy repeats the following action while possible: choose a pair $(i, j)$ from the current list, interchange the $i$th and the $j$th number in the current permutation, and delete $(i, j)$ from the list. Prove that Freddy can choose pairs in such an order that, after the process finishes, the numbers in the permutation are ordered ascendingly.
+		
+		\item 
+		Suppose not all integers $a,b,c,d$ are equal. Start with $(a,b,c,d)$ and repeatedly replace $(a,b,c,d)$ by $(a-b,b-c,c-d,d-a)$. Prove that then at least one number of the quadruple will eventually become arbitrarily large.
+		
+		\item % http://webcache.googleusercontent.com/search?q=cache%3Awww.math.olympiaadid.ut.ee%2Farhiiv%2Floppv%2Flp2009%2Flp2009.pdf&oq=cache%3Awww.math.olympiaadid.ut.ee%2Farhiiv%2Floppv%2Flp2009%2Flp2009.pdf&aqs=chrome..69i57j69i58.1661j0j4&sourceid=chrome&ie=UTF-8
+		In a rectangular grid a number of smaller rectangles (possibly overlapping) are cut out from the top-right corner of the original grid. All the remaining squares are filled with integers corresponding to the total numbers of squares which are either directly above or directly to the right of the square. Prove that number of squares with even numbers is at least as big as the number with odd numbers. 
+		
+		\item %http://www.hexagon.edu.vn/images/resources/upload/dec3c0b23f6d5bffa9c661616b1658fd/problemsolvingmethods%20in%20combinatorics%20an%20approach%20to%20olympiad_1377958817.pdf
+		$23$ friends want to play soccer. For this they choose a referee and the others split into two teams of $11$ persons each. They want to do this so that the total weight of each team is the same. We know that they all have integer weights and that, regardless of who is the referee, it is possible to make the two teams. Prove that they all have the same weight.
+		
+		\item  % https://mks.mff.cuni.cz/kalva/imo/isoln/isoln863.html
+		To each vertex of a regular pentagon an integer is assigned in such a way that
+		the sum of all five numbers is positive. If three consecutive vertices are assigned
+		the numbers $x, y, z$ respectively and $y < 0$ then the following operation is
+		allowed: the numbers $x, y, z$ are replaced by $x+y, -y, z+y$ respectively. Such
+		an operation is performed repeatedly as long as at least one of the five numbers
+		is negative. Determine whether this procedure necessarily comes to and end
+		after a finite number of steps.
+		
+		\item % https://mindyourdecisions.com/blog/2013/06/25/the-man-and-the-lion-puzzle-pursuit-and-evasion-game-theory/
+		A man is stuck in a perfectly circular arena with a lion. The man can move as fast as the lion. Is it possible for the man to survive?
+	\end{enumerate}
+\end{document}
