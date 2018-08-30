@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\relpenalty=10000
+\binoppenalty=10000
+
+\begin{document}
+\section*{Geometric inequalities}
+	\begin{enumerate}
+		\item %vorrat 48
+		Prove the inequalities for $x \in \left(\frac{-\pi}{2},\frac{\pi}{2}\right)$
+		$$|\tan x| \geq |x| \geq |\sin x| \geq  \frac{2}{\pi}|x|$$
+		\item %vorrat 49
+		Prove the inequalities for $0 < \alpha < \beta < \frac{\pi}{2}$
+		$$\frac{\sin \beta}{\sin \alpha} < \frac{\beta}{\alpha} < \frac{\tan \alpha}{\tan \beta}$$
+		\item % vorrat 52
+		Prove the inequalities where $a,b,c$ are lengths of triangles sides
+		\begin{enumerate}
+			\item $a^2 + b^2 + c^2 < 2 (ab + bc + ca)$
+			\item $a^4 + b^4 + c^4 < 2 (a^2b^2 + b^2c^2 + c^2a^2)$
+		\end{enumerate}  
+		\item % vorrat 53
+		Prove that $R \geq 2r$ given that $R$ is the radius of circumcircle and $r$ is the radius of incircle of a triangle.	
+		\item \emph{(Ptolemy's inequality).}
+		Prove the inequality for any four points $A,B,C,D$ on a plane
+		$$AC \cdot BD \leq AB \cdot CD + AD \cdot BC$$	
+		When does the equality hold?
+		\item \emph{(Erdős-Mordell inequality).} % vorrat 62
+		Let $P$ be a point in the interior of $\triangle ABC$ and $X$, $Y$,$Z$ projections of $P$ to $BC$,$AC$,$AB$ respectively. Prove that
+		$$PA+PB+PC \geq 2(PX+PY+PZ)$$
+		When does the equality hold?
+		\item %vorrat 63
+		Points $A,B,C,X,Y,Z,P$ are defined as before. Prove that
+		$$AP \cdot BC + BP \cdot AC + CP \cdot AB \geq 4S_{\triangle ABC} $$
+		\item %vorrat 64
+		Points $A,B,C,X,Y,Z,P$ are defined as before. Prove that
+		$$AP \cdot XP + BP \cdot YP + CP \cdot ZP \geq 2(XP \cdot YP + YP \cdot ZP + ZP \cdot XP) $$
+		
+	\end{enumerate}
+\end{document}
