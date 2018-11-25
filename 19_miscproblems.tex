@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\relpenalty=10000
+\binoppenalty=10000
+\DeclareMathOperator{\lcm}{lcm}
+
+
+\begin{document}
+\section*{Miscelleanous revision problems for BMO}
+
+\begin{enumerate}
+  \item $(x,y,z)$ is a point on unit sphere. Find the maximal value of $x+2y+3z$.
+
+  % http://artofproblemsolving.com/wiki/index.php?title=2004_USAMO_Problems/Problem_5
+  \item Prove for $x \geq 0$ that $x^5+1 \geq x^3 + x^2$.
+  \item Prove for $x,y,z \geq 0$
+  $$3(x^3+y^3+z^3)^2 \geq (x^2+y^2+z^2)^3 $$
+  \item Prove for $a,b,c \geq 0$
+  $$(a^5-a^2+3)(b^5-b^2+3)(c^5-c^2+3)\geq (a+b+c)^3$$
+
+  % vorrat 104
+	\item Given positive real numbers $x_1,\dots,x_n$ for which $x_1^2+\dots+x_n^2=1$, find the minimal value of the expression
+	$$\frac{x_1^5}{x_2+x_3+\dots+x_n} + \frac{x_2^5}{x_1+x_3+\dots+x_n} + \dots +\frac{x_n^5}{x_1+x_2+\dots+x_{n-1}}$$
+
+	% vorrat 101
+	\item Let $x_1,\dots,x_n$ be positive real numbers for which $x_1+\dots+x_n=1$. Prove that
+	$$\frac{x_1}{\sqrt{1-x_1}} + \dots + \frac{x_n}{\sqrt{1-x_n}}
+	\geq
+	\frac{\sqrt{x_1}+\dots+\sqrt{x_n}}{\sqrt{n-1}} $$
+
+  \item % http://www.math.olympiaadid.ut.ee/arhiiv/varia/bwtr/bw18tr/bw18tren.pdf
+  Find all factors of $10^{2013}-1$ which are smaller than $100$.
+
+  \item % http://www.math.olympiaadid.ut.ee/arhiiv/varia/bwtr/bw18tr/bw18tren.pdf
+  Find the number of possible values for positive integer $k$ if it is known that $\lcm(6^6,8^8,k)=12^{12}$
+
+\end{enumerate}
+\end{document}
