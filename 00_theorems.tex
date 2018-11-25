@@ -1,0 +1,213 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{physics}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\relpenalty=10000
+\binoppenalty=10000
+
+\begin{document}
+\section{Geometry}
+  \subsection{Inscribed angles}
+    \begin{enumerate}
+      \item Inscribed angles subtending the same arc are equal to each other
+      \item Inscribed angle is equal to half of the central angle subtending the same arc.
+      \item \textbf{Alternate segment theorem}: Angle between chord and tangent is equal to inscribed angle which subtends to that chord.
+    \end{enumerate}
+  \subsection{Power of point}
+    \begin{enumerate}
+      \item The \textbf{power of point} $P$ with respect to circle with centre $O$ and radius $r$ is defined as
+      $$ p= PO^2-r^2 $$
+      \item For any line through point $P$ which intersects the circle at points $A$ and $B$
+      $$p= PA \times PB$$
+    \end{enumerate}
+  \subsection{Trigonometry}
+    \begin{enumerate}
+      \item Basic trigonometric identities
+      $$\frac{\sin x}{\cos x} = \tan x$$
+      $$\sin^2 x + \cos^2 x =1$$
+      \item Double angle formulae
+      $$ \cos 2x = \cos^2 x - \sin^2 x $$
+      $$ \sin 2x = 2\sin x \cos x $$
+      \item Sine law
+      $$\frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma} = 2R$$
+      \item Cosine law
+      $$ a^2 + b^2 - c^2 -2ab\cos\gamma = 0$$
+    \end{enumerate}
+\newpage
+\section{Algebra}
+  \subsection{Polynomials}
+    \begin{enumerate}
+      \item \textbf{Bezout's theorem}: A polynomial $P(x)$ is divisible by the binomial $(x-a)$ if and only if $P(a)=0$.
+
+      \item \textbf{The fundamental theorem of algebra}: Every non-constant polynomial has a complex root.
+
+      \item \textbf{The rational root theorem}: If $x = p/q$ is a rational zero
+      of a polynomial $P(x) = a_nx^n +\hdots + a_0$ with integer coefficients and $p,q=1$,
+      then $p | a_0$ and $q | a_n$.
+
+      \item \textbf{Vieta's formulae}: If the solutions polynomial of degree $n$ are $x_1,x_2,\dots,x_n$ and  $a_n=1$, then the following holds:
+      \begin{eqnarray*}
+      x_1+x_2+\ldots+x_n &=& -a_{n-1},\\
+      x_1x_2+x_1x_3+\ldots+x_{n-1}x_{n} &=& \hphantom{-} a_{n-2}, \\
+      x_1x_2x_3+x_1x_2x_4+\ldots+x_{n-2}x_{n-1}x_n &=& -a_{n-3},\\
+      \ldots \\
+      x_1x_2\ldots x_n &=& (-1)^n a_0.
+      \end{eqnarray*}
+    \end{enumerate}
+  \subsection{Inequalities}
+    \begin{enumerate}
+    	\item \textbf{General mean inequality}:
+    	The mean of order $p$ of positive real numbers $x_1,\dots,x_n$ is defined as:
+    	$$M_p=
+    	\begin{cases}
+    	\left(\frac{x_1^p+ \dots + x_n^p}{n}\right)^{1/p} &\text{for } p \ne 0 \\
+    	\sqrt[n]{x_1 \dots x_n}                           &\text{for } p=0
+    	\end{cases}
+    	$$
+    	In particular
+    	\begin{center}
+    		\begin{tabular}{lcl}
+    			Smallest element & $\min\{x_i\}$ & $M_{-\infty}$ \\
+    			Harmonic mean & HM & $M_{-1}$ \\
+    			Geometric mean & GM & $M_0$ \\
+    			Arithmetic mean & AM & $M_1$ \\
+    			Quadratic mean & QM & $M_2$ \\
+    			Largest element & $\max\{x_i\}$ & $M_{\infty}$
+    		\end{tabular}
+    	\end{center}
+    	Then for any real $p$ and $q$
+    	$$M_p \leq M_q \iff p \leq q $$
+
+    	\item \textbf{Cauchy inequality}:
+    	For real numbers $x_1, \dots , x_n, y_1, \dots , y_n$
+
+    	$$\left(\sum_{i=1}^{n} x_i y_i\right)^2 \leq \sum_{i=1}^{n} x_i^2 \sum_{i=1}^{n} y_i^2 $$
+
+    	\item \textbf{Chebyshev inequality}:
+    	For real numbers $x_1 \geq \dots \geq x_n$ and $y_1 \geq \dots \geq y_n$
+    	$$\frac{1}{n} \sum_{i=1}^{n} x_iy_i
+    	\geq
+    	\left(\frac{1}{n}\sum_{i=1}^{n}x_i\right)
+    	\left(\frac{1}{n}\sum_{i=1}^{n}y_i\right)
+    	\geq
+    	\frac{1}{n} \sum_{i=1}^{n} x_iy_{n+1-i} $$
+
+    	\item \textbf{Jensen inequality.}
+    	Given positive real numbers $\lambda_1,\hdots,\lambda_n$ for which $\lambda_1+\hdots+\lambda_n=1$  and a convex function $f(x)$ the following holds:
+    	$$f(\lambda_1 x_1 + \hdots + \lambda_n x_n) \leq \lambda_1 f(x_1) + \hdots + \lambda_n f(x_n)$$
+    	Similarly, when $f(x)$ is a concave function, then
+    	$$f(\lambda_1 x_1 + \hdots + \lambda_n x_n) \geq \lambda_1 f(x_1) + \hdots + \lambda_n f(x_n)$$
+  	\end{enumerate}
+  \subsection{Functional equations}
+    \begin{enumerate}
+      \item
+      If $f(x)=f(y)$ implies $x=y$, then $f$ is \textbf{injective}
+      \item
+      If for each element $y$ in function codomain, there exists $x$ for which $f(x)=y$, then $f$ is \textbf{surjective}.
+      \item
+      If $f$ is both injective and surjective then $f$ is \textbf{bijective} (one-to-one).
+      \item \textbf{Cauchy functions}: If any of the following is satisfied
+      \begin{enumerate}
+        \item The function is continuous at one point,
+        \item The function is monotonic on any interval,
+        \item The function is bounded on any interval.
+      \end{enumerate}
+      then all of the following functional equations have the respective solutions.
+      \begin{align}
+         f(x+y) &= f(x) + f(x) & \Rightarrow && f(x) &= cx \\
+         f(xy)  &= f(x)f(y)    & \Rightarrow && f(x) &= x^c \\
+         f(xy)  &= f(x) +f(y)  & \Rightarrow && f(x) &= c \log |x| \\
+         f(x+y) &= f(x)f(y)    & \Rightarrow && f(x) &= e^{cx}
+      \end{align}
+    \end{enumerate}
+\newpage
+\section{Number Theory}
+  \subsection{Divisibility}
+    \begin{enumerate}
+      \item
+      If $a \mid b$ and $ c \mid d$ then $ac \mid bd$
+      \item
+      If $a \mid b$ and $a \mid c$, then $a \mid b+c$
+      \item
+      \textbf{Euclid's algorithm.} \\
+      $\gcd (a,b) = \gcd (a,b-a)$
+      \item
+      \textbf{Corollary of Euclid's algorithm.} \\
+      $ax+by=n$ has solution $(x,y)$ in integers if and only if $gcd(a,b) \mid n$
+    \end{enumerate}
+  \subsection{Congruences}
+    For integers $a,b,c,d,m,n$ and prime $p$.
+    \begin{enumerate}
+      \item
+      $a \equiv b \mod m \iff m \mid a-b $
+      \item
+      $a\equiv b \mod m$ and $ c\equiv d \mod m \implies a+c\equiv b+d \mod m$
+      \item
+      $a \equiv b \mod m \iff an \equiv bn \mod mn$
+      \item
+      $a \equiv b \mod m \implies an \equiv bn \mod m$
+    \end{enumerate}
+  \subsection{Exponential congruences}
+    \begin{enumerate}
+    \item
+    \textbf{Fermat's little theorem.} \\
+    For prime $p$ and integer $a$
+    $$a^p \equiv a \mod p$$
+
+    \item
+    \textbf{Wilson's theorem.} \\
+    $$(p-1)! \equiv -1 \mod p$$
+    if and only if when $p$ is prime number.
+
+    \item
+    \textbf{Number of factors} \\
+    The number of positive factors of $n=p_1^{\alpha_1} \dots p_k^{a_k}$
+    $$d(n)= (\alpha_1+1)(\alpha_2+1)\dots (\alpha_k+1)$$
+    \item
+    \textbf{Sum of factors} \\
+    The sum of positive factors of $n=p_1^{\alpha_1} \dots p_k^{a_k}$
+
+    $$\sigma(n)= \frac{p_1^{\alpha_1+1}-1}{p_1-1} \dots  \frac{p_k^{\alpha_k+1}-1}{p_k-1}$$
+
+    \item
+    \textbf{Euler's function} \\
+    Euler’s function or totient function $\varphi(n)$ is defined for $n=p_1^{\alpha_1} \dots p_k^{a_k}$ as the number
+    of positive integers less than $n$ and coprime to $n$. Then
+    $$\varphi(n) = n \left(1-\frac{1}{p_1}\right) \dots  \left(1-\frac{1}{p_k}\right)$$
+
+    \item
+    \textbf{Euler's theorem}  (Generalisation of Fermat's theorem)\\
+    Let $n$ be a natural number and $a$ an integer such that $\gcd(a,n)=1$. Then
+    $$a^{\varphi(n)} \equiv 1 \mod n $$
+    \end{enumerate}
+\newpage
+\section{Combinatorics}
+  \subsection{Counting of objects}
+    \begin{enumerate}
+      \item \textbf{Permutations}: $P_n=n!$
+      \item \textbf{Variations}: $V^k_n=\frac{n!}{(n-k)!}$
+      \item \textbf{Combinations}: $C^k_n=\frac{n!}{(n-k)!}$
+    \end{enumerate}
+  \subsection{Pigeonhole principle}
+    \begin{enumerate}
+      \item If a set of $nk + 1$ different elements is partitioned into $n$ mutually disjoint subsets, then at least one subset will contain at least $k + 1$ elements.
+    \end{enumerate}
+  \subsection{Graph Theory}
+    \begin{enumerate}
+      \item \textbf{Tree} is a connected graph with no circuits. A connected graph with $n$ vertices is a tree if and only if it has $n-1$ edges.
+      \item \textbf{Euler path} is a path in which every edge of the graph appears exactly once. Likewise \textbf{Euler circuit} is a circuit in which every edge appears exactly once.
+      \item If each vertex in a connected graph has even degree, then the graph contains an Euler circuit.
+      \item If a connected graph has exactly two vertices with odd degree, it contains an Euler path.
+      \item A \textbf{Hamilton circuit} is a circuit in which each vertex appears exactly once.
+      \item
+      A \textbf{planar graph} can be embedded in a plane with edges corresponding to non-intersecting lines (not necessarily straight). A planar graph with $n$ vertices has at most $3n-6$ edges.
+      \item \textbf{Dirac's theorem}: A graph with $n$ vertices contains a Hamilton cycle if the degree of each vertex is at least $n/2$.
+      \item \textbf{Euler's formula}: $E+2=F+V$, where $E,F,V$ are the numbers of edges, faces and vertices of a polyhedron.
+
+  \end{enumerate}
+\end{document}
